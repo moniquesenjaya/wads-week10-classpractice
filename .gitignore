@@ -1,6 +1,5 @@
 React/node_modules/
 Django/env/
 Django/db.sqlite3
-Django/.DS_Store
-React/.DS_Store
 .DS_Store
+
