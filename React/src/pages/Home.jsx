@@ -6,12 +6,12 @@ const Home = () => {
 
   const fetchData = () => {
 
-    fetch("http://127.0.0.1:8000/heroes/", { mode: 'no-cors' })
-      .then((response) => {
+    fetch("http://127.0.0.1:8000/heroes/")
+      .then(response => {
         console.log(response)
         return response.json()
       })
-      .then((data) => {
+      .then(data => {
         setHero(data)
         console.log(data)
       })
@@ -26,7 +26,7 @@ const Home = () => {
       Heroes List     
         <ul>
           {hero.map(hero => (
-            <li key={hero.name}>{hero.alias}</li>
+            <li key={hero.name}>{hero.name}: {hero.alias}</li>
           ))}
         </ul>
     </div>

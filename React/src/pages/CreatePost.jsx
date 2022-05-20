@@ -20,14 +20,13 @@ const handleSubmit  = () => {
     "alias": alias
   }
   console.log(jsonData)
-  fetch('http://127.0.0.1:8000/heroes/', {  // Enter your IP address here
-
+  const response = fetch('http://localhost:8000/heroes/?format=json', {  
       method: 'POST', 
-      mode: 'cors', 
-      body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
-
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(jsonData) 
     })
-    
   }
 
 
